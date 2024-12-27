@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Info Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Country Info Finder</h1>
+    <input type="text" id="search" placeholder="Enter country name" list="suggestions" />
+    <datalist id="suggestions"></datalist>
+    <button id="search-btn">Search</button>
+    <select id="region-filter">
+      <option value="">Select Region</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+    <div id="result" class="hidden">
+      <h2 id="country-name"></h2>
+      <img id="flag" alt="Country flag" />
+      <p><strong>Capital:</strong> <span id="capital"></span></p>
+      <p><strong>Population:</strong> <span id="population"></span></p>
+      <p><strong>Region:</strong> <span id="region"></span></p>
+     
+      <button id="favorite-btn">Add to Favorites</button>
+    </div>
+    <div id="favorites" class="hidden">
+      <h3>Favorite Countries</h3>
+      <ul id="favorite-list"></ul>
+    </div>
+    <button id="toggle-btn" onclick="toggleFavorites()">Toggle Favorites</button>
+  </div>
+  <script src="index.js"></script>
+  </body>
+  </html>
